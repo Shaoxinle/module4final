@@ -1,0 +1,230 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Skip to Main Content Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #333;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Header and Navigation */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background: #34495e;
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+/* Features Section - Grid Layout */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Image Styling - Box Model */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #3498db;
+    padding: 10px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Page - Grid Layout */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item p {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Gallery Images - nth-child Selector */
+.gallery-item:nth-child(even) img {
+    border-radius: 50%;
+    border-color: #e74c3c;
+}
+
+/* About Page - Flex Layout */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.about-image {
+    flex: 1 1 300px;
+}
+
+.about-text {
+    flex: 1 1 400px;
+}
+
+.about-text h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.about-text h3 {
+    color: #3498db;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.skills-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.skills-list li {
+    background: #ecf0f1;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
